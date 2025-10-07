@@ -1,5 +1,8 @@
 # Git ignore file for LRU Cache project
 
+# Temporary/Summary files
+CLEANUP_SUMMARY.md
+
 # Compiled class files
 *.class
 
