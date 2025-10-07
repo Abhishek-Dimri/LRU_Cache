@@ -46,7 +46,7 @@ LRU_Cache/
 │   └── 🚧 DEVELOPMENT_CHALLENGES.md # "Problems We Fixed"
 ├── 🔧 Tools (Build Files)
 │   ├── 🏗️ pom.xml                   # "Shopping List for Java"
-│   ├── 🤖 build-and-test.ps1        # "One-Click Builder"
+│   ├── 📋 JAVA_21_UPGRADE_SUMMARY.md # "What We Updated"
 │   └── 🙈 .gitignore                # "Don't Save These Files"
 └── 📦 target/                       # Computer-Generated Junk (Ignored)
 ```
@@ -190,14 +190,14 @@ cache.put("video4", "Fish Video");
 ## 🔧 **Build and Configuration Files**
 
 #### 🏗️ **pom.xml** - "Shopping List for Java"
-**What it does:** Tells Maven (a build tool) what libraries our project needs.
+**What it does:** Tells Maven (a build tool) what libraries our project needs and how to build it.
 
-**Like:** A shopping list that says "I need JUnit for testing" and Maven goes and gets it.
+**Like:** A shopping list that says "I need JUnit for testing" and Maven goes and gets it automatically.
 
-#### 🤖 **build-and-test.ps1** - "One-Click Builder"
-**What it does:** A script that compiles and tests everything with one command.
+#### 📋 **JAVA_21_UPGRADE_SUMMARY.md** - "What We Updated"
+**What it does:** Documents how we upgraded from Java 11 to Java 21.
 
-**Like:** A button that says "Build my entire project" instead of typing 10 different commands.
+**Why:** Keeps track of what changed and why, for future reference.
 
 #### 🙈 **.gitignore** - "Don't Save These Files"
 **What it does:** Tells Git (version control) which files to ignore.
@@ -252,16 +252,16 @@ cache.put("video4", "Fish Video");
 1. **Download the project**
 2. **Open terminal/command prompt**
 3. **Navigate to the folder**
-4. **Run:** `.\build-and-test.ps1`
-5. **Watch it work!** 
+4. **Run:** `mvn clean package` (builds everything)
+5. **Run demo:** `mvn exec:java` (see it work!)
 
 You'll see:
-- ✅ Code compiling
+- ✅ Code compiling with Java 21
 - ✅ Tests running (and passing!)
 - ✅ Performance benchmarks
 - ✅ Demo showing how it works
 
-**No complex setup needed!** Everything works out of the box.
+**Prerequisites:** Java 21+ and Maven installed. Everything else works out of the box!
 
 ---
 

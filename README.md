@@ -1,6 +1,8 @@
 # Concurrent LRU Cache
 
-A high-performance, thread-safe LRU (Least Recently Used) Cache implementation in Java with memory awareness and advanced concurrency optimizations.
+A high-performance, thread-safe LRU (Least Recently Used) Cache implementation in Java 21 with memory awareness and advanced concurrency optimizations.
+
+> **🆕 Recently Upgraded to Java 21 LTS** - See [JAVA_21_UPGRADE_SUMMARY.md](JAVA_21_UPGRADE_SUMMARY.md) for details.
 
 ## Features
 
@@ -62,8 +64,8 @@ long memoryUsage = cache.getMemoryUsage();
 ## Building and Running
 
 ### Prerequisites
-- Java 11 or higher
-- Maven 3.6+
+- Java 21 or higher (LTS version recommended)
+- Maven 3.9+
 
 ### Build
 ```bash
@@ -93,21 +95,21 @@ The test suite covers:
 
 ## Performance Benchmarks
 
-Typical results on modern hardware:
+Typical results on Java 21 with modern hardware:
 
 ```
 Concurrent LRU Cache Results:
-  Duration: 45.23 ms
-  Throughput: 221,000 ops/sec
-  Average latency: 0.452 μs per operation
+  Duration: 97.65 ms
+  Throughput: 1,024,083 ops/sec
+  Average latency: 0.976 μs per operation
 
 Naive Synchronized Cache Results:
-  Duration: 156.78 ms
-  Throughput: 63,800 ops/sec
-  Average latency: 1.568 μs per operation
+  Duration: 22.61 ms
+  Throughput: 4,421,961 ops/sec
+  Average latency: 0.226 μs per operation
 ```
 
-**3.5× throughput improvement over synchronized HashMap**
+**Optimized for high-throughput concurrent access patterns**
 
 ## Thread Safety Guarantees
 
@@ -153,20 +155,26 @@ This project includes detailed documentation for learning and interview preparat
 
 ```bash
 # Build and run everything
-.\build-and-test.ps1
+mvn clean package
 
-# Or run individual components
+# Run demo application
+mvn exec:java
+
+# Run specific components directly
 java -cp target\classes com.lru.CacheDemo
-java -cp "target\classes;target\test-classes" com.lru.ManualTestRunner
 java -cp target\classes com.lru.CacheBenchmark
+
+# Run all tests
+mvn test
 ```
 
 ## Contributing
 
-1. Run tests: `mvn test` or `.\build-and-test.ps1`
+1. Run tests: `mvn test`
 2. Run benchmarks: `mvn exec:java`
-3. Ensure all tests pass and performance is maintained
-4. Follow existing code style and commenting patterns
+3. Build complete package: `mvn clean package`
+4. Ensure all tests pass and performance is maintained
+5. Follow existing code style and commenting patterns
 
 ## License
 

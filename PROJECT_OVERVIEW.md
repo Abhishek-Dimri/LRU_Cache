@@ -5,9 +5,9 @@
 ```
 LRU_Cache/
 ├── 📄 README.md                     # Main project documentation
-├── 📄 pom.xml                       # Maven build configuration
+├── 📄 pom.xml                       # Maven build configuration (Java 21)
 ├── 📄 .gitignore                    # Git ignore patterns
-├── 📄 build-and-test.ps1           # Build automation script
+├── 📄 JAVA_21_UPGRADE_SUMMARY.md   # Java 21 upgrade documentation
 ├── 📄 BEGINNER_GUIDE.md            # Simple explanation for newcomers
 ├── 📄 INTERVIEW_QUESTIONS.md       # Comprehensive interview prep
 ├── 📄 REAL_WORLD_USE_CASES.md      # Production scenarios & examples
@@ -104,26 +104,25 @@ LRU_Cache/
 
 ## 🔧 Build & Run Instructions
 
-### Quick Start
+### Maven Build (Recommended)
 ```powershell
-# Run the automated build script
-.\build-and-test.ps1
+# Complete build and test
+mvn clean package
+
+# Run demo application
+mvn exec:java
+
+# Run tests only
+mvn test
+
+# Compile only
+mvn compile
 ```
 
-### Manual Commands
+### Direct Java Commands (Alternative)
 ```powershell
-# Clean and compile
-Remove-Item -Recurse -Force target -ErrorAction SilentlyContinue
-javac -d target\classes src\main\java\com\lru\*.java
-
-# Compile tests
-javac -cp target\classes -d target\test-classes src\test\java\com\lru\*.java
-
 # Run demonstration
 java -cp target\classes com.lru.CacheDemo
-
-# Run test suite
-java -cp "target\classes;target\test-classes" com.lru.ManualTestRunner
 
 # Run benchmarks
 java -cp target\classes com.lru.CacheBenchmark
