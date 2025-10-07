@@ -2,6 +2,7 @@
 
 # Temporary/Summary files
 CLEANUP_SUMMARY.md
+JAVA_21_UPGRADE_SUMMARY.md
 
 # Compiled class files
 *.class
